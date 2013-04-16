@@ -6,6 +6,6 @@ from posts.models import Commentary
 class AddCommentaryForm(forms.ModelForm):
   class Meta:
     model = Commentary
-    # fields = ('author', 'content')
+    fields = ('author', 'content')
     # fields = ('post', 'content')
-    fields = ('owner', 'content')
+    # fields = ('owner', 'content')

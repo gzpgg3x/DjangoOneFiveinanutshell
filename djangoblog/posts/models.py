@@ -23,9 +23,9 @@ class Post(models.Model):
   class Meta:
     ordering = [u'-publication_date']
 
-  # def get_absolute_url(self):
-  #   from django.core.urlresolvers import reverse
-  #   return reverse('postdetails',kwargs={ 'slug':self.machine_name })  
+  def get_absolute_url(self):
+    from django.core.urlresolvers import reverse
+    return reverse('postdetails',kwargs={ 'slug':self.machine_name })  
 
 class Commentary(models.Model):
   post = models.ForeignKey(Post)

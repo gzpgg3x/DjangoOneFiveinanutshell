@@ -1,6 +1,6 @@
 # Create your views here.
 from django.views.generic import ListView, TemplateView
-# from posts.forms import AddCommentaryForm
+from posts.forms import AddCommentaryForm
 from posts.models import Post
  
 class PostList(ListView):
