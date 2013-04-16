@@ -27,19 +27,19 @@ class Post(models.Model):
   #   from django.core.urlresolvers import reverse
   #   return reverse('postdetails',kwargs={ 'slug':self.machine_name })  
 
-# class Commentary(models.Model):
-#   post = models.ForeignKey(Post)
+class Commentary(models.Model):
+  post = models.ForeignKey(Post)
  
-#   content = models.TextField()
+  content = models.TextField()
  
-#   publication_date = models.DateTimeField(auto_now_add=True)
+  publication_date = models.DateTimeField(auto_now_add=True)
  
-#   author = models.CharField(max_length=50, default=u'The invisible man')
+  author = models.CharField(max_length=50, default=u'The invisible man')
  
-#   def __unicode__(self):
-#     return self.owner + u'@' + unicode(self.post)
+  def __unicode__(self):
+    return self.owner + u'@' + unicode(self.post)
  
-#   class Meta:
-#     verbose_name_plural = u'commentaries'
-#     ordering = [u'-publication_date']
+  class Meta:
+    verbose_name_plural = u'commentaries'
+    ordering = [u'-publication_date']
 

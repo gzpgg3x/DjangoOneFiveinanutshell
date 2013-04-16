@@ -6,7 +6,7 @@ from django.contrib import admin
 # admin.site.register(Post)
 
 class PostAdmin(admin.ModelAdmin):
-  list_display = ('title', 'excerpt', 'publication_date', 'owner')
+  list_display = ('title', 'machine_name', 'excerpt', 'publication_date', 'owner')
  
   list_filter = ['publication_date', 'owner']
  
